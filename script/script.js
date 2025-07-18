@@ -38,6 +38,7 @@ function borrowBook(title) {
   if (book) {
     if (book.borrowed === false) {
       console.log("Vous avez emprunté " + book.title + ".");
+      book.borrowed=true
     } else {
       console.log(`Le livre ${book.title} est déjà emprunté.`);
     }
@@ -52,15 +53,15 @@ function borrowBook(title) {
 function returnBook(title) {
   const book = searchByTitle(title);
 
-  if (book.title.toLowerCase().trim() != title.toLowerCase().trim()) {
-    console.log(
-      "Le livre " + book.title + " n'existe pas dans la bibliothèque."
-    );
-  } else if (book.borrowed === false) {
-    console.log("Le livre " + book.title + " est déjà disponible.");
+  if (book) {
+    if (book.borrowed === false) {
+        console.log(`Le livre ${book.title} n'est pas emprunté.`);
+    } else {
+        console.log(`Vous avez rendu le livre ${book.title}.`);
+        book.borrowed=false
+    }
   } else {
-    book.borrowed = false;
-    console.log("Vous avez rendu le livre " + book.title + ".");
+    console.log(`Le livre ${book.title} n'existe pas dans la bibliothèque.`);
   }
 }
 
@@ -98,7 +99,10 @@ console.log("Le livre que vous recherchez est");
 console.log(searchByTitle("La Tisseuse de Mélodies"));
 
 //Emprunter le livre 'La Tisseuse de Mélodies'
-borrowBook("La Tisseuse de Mélodies");
+borrowBook("Apprentice to the Villain");
+
+//Affiche la mise à jour du tableau
+console.table(library);
 
 //Retourner le livre 'Un été à New York'
 returnBook("Un été à New York");
