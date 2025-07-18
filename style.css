@@ -1,0 +1,45 @@
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #fdfaf6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4b2e2e;
+    }
+
+    form {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    input, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 1rem;
+    }
+
+    #books {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .book {
+      background: #fff8f0;
+      border: 1px solid #dab49d;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .book p {
+      margin: 0.3rem 0;
+    }
+
+    .book button {
+      margin-right: 0.5rem;
+    }

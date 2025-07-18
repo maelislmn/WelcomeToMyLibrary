@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Tanière des Livres</title>
+    <title>Biblibulle</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="/script/script.js" defer></script>
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-    
+    <header>
+
+    <h1>Biblibulle</h1></header>
+
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Titre du livre" required>
+    <input type="text" id="author" placeholder="Nom de l'auteur" required>
+    <input type="text" id="year" placeholder="Année de publication" required>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <div id="books"></div>
+
 </body>
 </html>
