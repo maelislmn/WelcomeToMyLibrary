@@ -9,14 +9,13 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-    <header> 
+    <header> <img src="images/favicon.png" width="15%">
     <h1>Biblibulle</h1></header>
 
+    <h2>Consulter un livre</h2>
   <form id="book-form">
-    <input type="text" id="title" placeholder="Titre du livre" required>
-    <input type="text" id="author" placeholder="Nom de l'auteur" required>
-    <input type="text" id="year" placeholder="Année de publication" required>
-    <button type="submit">Ajouter</button>
+    <input type="text" id="filters" placeholder="Titre, auteur, année de publication" required>
+    <button type="submit">Rechercher</button>
   </form>
 
   <div id="books"></div>
